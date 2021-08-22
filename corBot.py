@@ -4,7 +4,6 @@ import csv
 import pandas as pd
 from datetime import date
 
-#sID: 225690515323092993
 
 newCases = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/ecdc/new_cases.csv'
 newDeaths = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/ecdc/new_deaths.csv'
@@ -60,5 +59,5 @@ def countryStat(country):
     countryStats = '       {}: \nNew Cases: {} \nNewDeaths {} \nTotal Cases: {}'.format(country, newCasesCountry, newDeathsCountry, totalCasesCountry)
     return countryStats
 
-
-client.run('NzA0MjU0NjQ2NjIwOTEzNzM0.XqdUMA.8okB2vdCzYYl_JU4zVBozvMD7Ug')
+#insert bot ID in brackets
+client.run()
