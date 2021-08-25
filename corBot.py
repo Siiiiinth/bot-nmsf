@@ -65,6 +65,11 @@ def country_stats(country):
     country_r = df.iat[index, 16]
     country_fullyvaccinated = df.iat[index, 36]
     country_pop = df.iat[index, 46]
+    if not math.isnan(country_pop) and not math.isnan(country_fullyvaccinated):
+        country_percentage = (country_fullyvaccinated/country_pop)*100
+        res = '{}: \nTotal Cases: {} \nNew Cases Today: {} \nTotal Deaths: {} \nReproduction Rate: {} \nFully Vaccinated: {} \nPopulation: {} \nVaccination Rate: {:.2f}%'.format( date.today(), country_total, country_new, country_deaths,country_r,country_fullyvaccinated,country_pop, country_percentage)
+        return res
+
 
     res = '{}: \nTotal Cases: {} \nNew Cases Today: {} \nTotal Deaths: {} \nReproduction Rate: {} \nFully Vaccinated: {} \nPopulation: {}'.format( date.today(), country_total, country_new, country_deaths,country_r,country_fullyvaccinated,country_pop)
     return res
